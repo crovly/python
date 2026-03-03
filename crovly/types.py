@@ -14,13 +14,13 @@ class VerifyResponse:
         success: Whether the token was valid and verification passed.
         score: Risk score from 0.0 (bot) to 1.0 (human).
         ip: The IP address that solved the challenge.
-        solved_at: ISO 8601 timestamp of when the challenge was solved.
+        solved_at: Unix timestamp in milliseconds when the challenge was solved.
     """
 
     success: bool
     score: float
     ip: str
-    solved_at: str
+    solved_at: int
 
     def is_human(self, threshold: float = 0.5) -> bool:
         """Check if the verification indicates a human.

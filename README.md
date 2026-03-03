@@ -215,7 +215,7 @@ except CrovlyError as e:
 | `success` | `bool` | Whether the token is valid |
 | `score` | `float` | Risk score: 0.0 (bot) to 1.0 (human) |
 | `ip` | `str` | IP address that solved the challenge |
-| `solved_at` | `str` | ISO 8601 timestamp |
+| `solved_at` | `int` | Unix timestamp in milliseconds |
 
 ## Requirements
 
