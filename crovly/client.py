@@ -40,7 +40,7 @@ def _parse_verify_response(data: Dict[str, Any]) -> VerifyResponse:
         success=data.get("success", False),
         score=float(data.get("score", 0.0)),
         ip=data.get("ip", ""),
-        solved_at=data.get("solvedAt", ""),
+        solved_at=int(data.get("solvedAt", 0)),
     )
 
 
