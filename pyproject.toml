@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "crovly"
-version = "1.0.1"
+version = "1.0.2"
 description = "Official Crovly Python SDK — verify captcha tokens"
 readme = "README.md"
 license = "MIT"

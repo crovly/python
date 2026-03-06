@@ -313,3 +313,15 @@ class AsyncCrovly:
 
     async def __aexit__(self, *args: object) -> None:
         await self.close()
+
+    def __del__(self) -> None:
+        try:
+            if not self._client.is_closed:
+                import warnings
+                warnings.warn(
+                    "AsyncCrovly client was not closed. Use 'async with AsyncCrovly(...)' or call 'await client.close()'.",
+                    ResourceWarning,
+                    stacklevel=2,
+                )
+        except Exception:
+            pass
