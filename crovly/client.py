@@ -20,7 +20,7 @@ DEFAULT_API_URL = "https://api.crovly.com"
 DEFAULT_TIMEOUT = 10.0
 DEFAULT_MAX_RETRIES = 2
 RETRY_BASE_S = 0.2
-SDK_VERSION = "1.0.0"
+SDK_VERSION = "1.0.2"
 
 
 def _build_verify_body(
