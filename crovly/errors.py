@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 
 class CrovlyError(Exception):
@@ -41,7 +41,7 @@ class ValidationError(CrovlyError):
     def __init__(
         self,
         message: str = "Invalid request parameters",
-        details: Optional[List[dict[str, Any]]] = None,
+        details: Optional[List[Dict[str, Any]]] = None,
     ) -> None:
         super().__init__(message, "validation_error", 400)
         self.details = details
